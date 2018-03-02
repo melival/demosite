@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>melival.Рисунки</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script/jquery.js"></script>
+    <link rel="stylesheet" href="script/magpopup/dist/magnific-popup.css">
+    <script src="script/magpopup/dist/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.popup-img').magnificPopup({
+                delegate: 'a',
+                type: 'image'
+            });
+            $('#hide-block').hide();
+            $('#show-hided').on('click', function() {
+                var showButtonText = $('#hide-block').is(':visible') ? 'показать' : 'скрыть';
+                $('#show-hided').text(showButtonText);
+                $('#hide-block').slideToggle();
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="insite">
+            <header>
+                <a href="index.html">.Главная</a>
+                <a href="pics.html">.Рисунки</a>
+                <a href="slider.html">.Слайды</a>
+                <a href="articles.html">.Статьи</a>
+            </header>
+            <h1>Страница сайта с рисунками</h1>
+            <div class="content popup-img">
+                <a href="img\pics\img1.jpg"><img src="img\pics\img1.jpg" alt="image1"></a>
+                <a href="img\pics\img2.jpg"><img src="img\pics\img2.jpg" alt="image2"></a>
+                <a href="img\pics\img3.jpg"><img src="img\pics\img3.jpg" alt="image3"></a>
+                <a href="img\pics\img4.jpg"><img src="img\pics\img4.jpg" alt="image4"></a>
+                <a href="img\pics\img5.jpg"><img src="img\pics\img5.jpg" alt="image5"></a>
+                <a href="img\pics\img6.jpg"><img src="img\pics\img6.jpg" alt="image6"></a>
+            </div>
+            <div id="hide-block" class="content popup-img">
+                <a href="img\pics\img1.jpg"><img src="img\pics\img1.jpg" alt="image1"></a>
+                <a href="img\pics\img2.jpg"><img src="img\pics\img2.jpg" alt="image2"></a>
+                <a href="img\pics\img3.jpg"><img src="img\pics\img3.jpg" alt="image3"></a>
+                <a href="img\pics\img4.jpg"><img src="img\pics\img4.jpg" alt="image4"></a>
+                <a href="img\pics\img5.jpg"><img src="img\pics\img5.jpg" alt="image5"></a>
+                <a href="img\pics\img6.jpg"><img src="img\pics\img6.jpg" alt="image6"></a>
+            </div>
+            <a id="show-hided" href="#"> показать </a>
+
+
+        </div>
+        <footer>&copy; "meLiVaL Customs", 2018.</footer>
+    </div>
+</body>
+
+</html>
